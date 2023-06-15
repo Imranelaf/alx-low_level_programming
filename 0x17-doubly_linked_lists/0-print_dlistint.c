@@ -5,17 +5,17 @@
  * @h: pointer to the list.
  * Return: number of nodes.
  **/
-
 size_t print_dlistint(const dlistint_t *h)
 {
-    size_t count = 0;
+	const dlistint_t *node = h;
+	size_t cont = 0;
 
-    while (h)
-    {
-        printf("%i\n", h->n);
-        h = h->next;
-        count++;
-    }
+	while (node)
+	{
+		printf("%i\n", node->n);
+		cont++;
+		node = node->next;
+	}
 
-    return (count);
+	return (cont);
 }
